@@ -1,3 +1,4 @@
+from app.api.routes.job_routes import router as job_router
 from fastapi import FastAPI
 from app.api.routes.resume_routes import router as resume_router
 
@@ -23,3 +24,4 @@ def health_check():
 
 
 app.include_router(resume_router)
+app.include_router(job_router)
